@@ -1,0 +1,42 @@
+# Site settings
+title: "The Green Dragon"
+
+email: bzreinhardt@gmail.com
+description: "Ben Reinhardt on the Internet"
+baseurl: ""
+url: "http://benjaminreinhardt.com"
+username: bzreinhardt
+twittername: Ben_Reinhardt
+
+# not sure what these do
+paginate: 10
+# Build settings
+markdown: kramdown
+#another option - rdiscount
+permalink: none
+highlighter: pygments
+collections: 
+ concerning_bens: 
+  output: true
+
+gems: ['jekyll/scholar']
+
+scholar:
+  style: modern-language-association-with-url
+  locale: en
+
+  sort_by: none
+  order: ascending
+
+  source: ./_bibliography
+  bibliography: references.bib
+  bibliography_template: "{{reference}}"
+
+  replace_strings: true
+  join_strings:    true
+
+  details_dir:    bibliography
+  details_layout: bibtex.html
+  details_link:   Details
+
+  query: "@*"
